@@ -1,5 +1,7 @@
 package ru.netology.javaQA38.Homework_7_1.stats;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -14,7 +16,7 @@ public class StatsServiceTest {
 
         int summa = 180;
         int actualSum = service.sumSales(sales);
-        Assertions.assertEquals(summa, actualSum);
+        assertEquals(summa, actualSum);
 
     }
 
@@ -26,7 +28,7 @@ public class StatsServiceTest {
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int averageSumma = 15;
         int actualAverageSumm = service.averageSumSales(sales);
-        Assertions.assertEquals(averageSumma, actualAverageSumm);
+        assertEquals(averageSumma, actualAverageSumm);
     }
 
 
@@ -40,7 +42,7 @@ public class StatsServiceTest {
         int month = 8;
         int actualyMonth = service.maxSales(sales);
 
-        Assertions.assertEquals(month, actualyMonth);
+        assertEquals(month, actualyMonth);
     }
 
     @Test // 4. Тест номер месяца в котором был мин продаж
@@ -53,7 +55,7 @@ public class StatsServiceTest {
         int month = 9;
         int actualyMonth = service.minSales(sales);
 
-        Assertions.assertEquals(month, actualyMonth);
+        assertEquals(month, actualyMonth);
     }
 
     @Test // 5. Тест кол-во месяцев, в которых продажи были ниже среднего
@@ -67,7 +69,7 @@ public class StatsServiceTest {
         int actualMonthCount;
         actualMonthCount = service.countMonthDownAverageSales(sales);
 
-        Assertions.assertEquals(monthCount, actualMonthCount);
+        assertEquals(monthCount, actualMonthCount);
 
     }
 
@@ -82,6 +84,6 @@ public class StatsServiceTest {
         int monthCount = 5;
         int actualMonthCount = service.countMonthUpperAverageSales(sales);
 
-        Assertions.assertEquals(monthCount, actualMonthCount);
+        assertEquals(monthCount, actualMonthCount);
     }
 }
