@@ -22,13 +22,10 @@ public class StatsService {
     // 3. Номер месяца в которром был пик продаж
     public int maxSales(long[] sales) {
         int maxMonth = 0;
-        int month = 0;
-        for (long sale : sales) {
-
-            if (sale >= sales[maxMonth]) {
-                maxMonth = month;
+        for (int i = 0; i < sales.length; i++) {
+            if (sales[i] >= sales[maxMonth]) {
+                maxMonth = i;
             }
-            month = month + 1;
         }
         return maxMonth + 1;
     }
@@ -37,13 +34,10 @@ public class StatsService {
     // 4. Номер месяца в котором был мин продаж
     public int minSales(long[] sales) {
         int minMonth = 0;
-        int month = 0;
-        for (long sale : sales) {
-
-            if (sale <= sales[minMonth]) {
-                minMonth = month;
+        for (int i = 0; i < sales.length; i++) {
+            if (sales[i] <= sales[minMonth]) {
+                minMonth=i;
             }
-            month = month + 1;
         }
         return minMonth + 1;
     }
